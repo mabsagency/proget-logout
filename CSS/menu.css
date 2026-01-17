@@ -6,6 +6,7 @@ section h2 {
     text-align: center;
     color: orange;
     margin-bottom: 50px;
+    font-size: 32px;
 }
 
 .menu-items {
@@ -33,6 +34,52 @@ section h2 {
     font-size: 40px;
     display: block;
     margin-bottom: 15px;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 30px;
+    }
+    
+    section h2 {
+        font-size: 26px;
+        margin-bottom: 35px;
+    }
+    
+    .menu-items {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 15px;
+    }
+    
+    section h2 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .menu-items {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .card::before {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
 }
 body::before {
     content: "";

@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
 }
 
 .hero h2 {
@@ -27,11 +28,60 @@
     border-radius: 30px;
     font-weight: bold;
     transition: .3s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
     background: #fff;
     transform: scale(1.05);
+}
+
+/* RESPONSIVE HERO */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        padding: 15px;
+    }
+    
+    .hero h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+        padding: 10px;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        padding: 10px 22px;
+        font-size: 12px;
+    }
 }
 body::before {
     content: "";
